@@ -1,19 +1,17 @@
 {
-  "name": "medical",
+  "name": "backend",
   "version": "1.0.0",
-  "description": "College project",
-  "main": "index.js",
+  "description": "",
+  "main": "app.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.12.11"
+  },
+  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/kadul1234/medical.git"
-  },
+  "keywords": [],
   "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/kadul1234/medical/issues"
-  },
-  "homepage": "https://github.com/kadul1234/medical#readme"
+  "license": "ISC"
 }
