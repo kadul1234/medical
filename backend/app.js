@@ -2,13 +2,29 @@ const mongoose=require('mongoose');
 const express = require('express');
 const app = express();
 app.use(express.json());
+const router = express.Router();
+
+app.use(express.json());
+
 
 require('./db/conn');
 
 
-app.get('/' , (req , res)=>{
-    res.send(`Hello world`);
-});
+
+app.use(require('./router/doctor_search'));
+
+const User = require('./model/userschema')
+
+const middleware = (req , res , next)=>
+{
+    console.log(`Middle ware`);
+    next();
+}
+
+
+//app.get('/' , (req , res)=>{
+//    res.send(`Hello world`);
+//});
 
 app.post('/signup',async(req ,res)=>{
     const{name,email,contact,password,appdoc}=req.body;
@@ -36,6 +52,6 @@ app.post('/signup',async(req ,res)=>{
 
 });
 
-app.listen(3001, ()=>{
+app.listen(80, ()=>{
     console.log('kaddy daddy working fine');
 })

@@ -7,7 +7,6 @@
     "express": "^4.17.1",
     "mongoose": "^5.12.11"
   },
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
